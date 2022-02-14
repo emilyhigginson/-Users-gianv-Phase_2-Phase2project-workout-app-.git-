@@ -1,16 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import DisplayCase from './DisplayCase';
-
-
+import CardContainer from './CardContainer';
 
 function App() {
   const [woArray, setWoArray] = useState ([])
   
-  
   useEffect (() => {
     fetch ('http://localhost:3000/workouts')
     .then (res => res.json())
-    .then (setWoArray)
+    .then (data => setWoArray(data))
   },[])
   
   console.log(woArray);
@@ -18,7 +15,7 @@ function App() {
   
   return (
     <div className="App">
-     <DisplayCase woArray ={woArray} />
+     <CardContainer woArray ={woArray} />
     </div>
   );
 }
