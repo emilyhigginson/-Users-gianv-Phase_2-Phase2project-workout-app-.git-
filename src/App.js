@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
 import Filter from "./Filter";
+import MyWorkouts from "./MyWorkouts";
 import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
 import "./style.css";
@@ -10,6 +11,7 @@ function App() {
   const [selected, setSelected] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const [myWoArray, setMyWoArray] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
@@ -42,6 +44,14 @@ function App() {
     }
   });
 
+  function onAddWorkout(wo) {
+    woArray.filter((workout) => {
+      if (workout.id === wo.id) {
+        setMyWoArray([...myWoArray, workout]);
+      }
+    });
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -52,13 +62,12 @@ function App() {
         isChecked={isChecked}
         setIsChecked={setIsChecked}
       />
-      <div>
-        {isChecked ? (
-          <CardContainer woArray={difficultyArray} />
-        ) : (
-          <CardContainer woArray={searchArray} />
-        )}
-      </div>
+      {isChecked ? (
+        <CardContainer woArray={difficultyArray} onAddWorkout={onAddWorkout} />
+      ) : (
+        <CardContainer woArray={searchArray} onAddWorkout={onAddWorkout} />
+      )}
+      <MyWorkouts myWoArray={myWoArray} />
     </div>
   );
 }

@@ -6,7 +6,6 @@ function SearchBar({ setSearchTerm, searchTerm, isChecked, setIsChecked}) {
 
     setIsChecked(isChecked => !isChecked)
   }
-  console.log(isChecked)
 
   function handleSearch(e) {
     setSearchTerm(e.target.value);

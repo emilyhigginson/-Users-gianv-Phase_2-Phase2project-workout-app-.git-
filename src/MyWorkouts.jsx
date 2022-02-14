@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import WorkoutCard from "./WorkoutCard";
 
-function MyWorkouts() {
+function MyWorkouts({ myWoArray }) {
+  const myWo= myWoArray.map((wo) => {
+    return <WorkoutCard key={wo.id} wo={wo} />;
+  });
   return (
-    <div>MyWorkouts</div>
-  )
+    <div >
+      <p>My Workouts</p>
+   <div className="cardDisplay">{myWo}</div>
+    </div>
+  );
 }
 
-export default MyWorkouts
+export default MyWorkouts;
