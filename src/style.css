@@ -1,0 +1,31 @@
+* {
+  margin: none;
+  padding: none;
+}
+
+
+
+.cardDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 10px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    min-width: 100px;
+    min-height: 160px;
+    padding: 5px 20px;
+    margin: 15px;
+}

@@ -3,6 +3,7 @@ import CardContainer from "./CardContainer";
 import Filter from "./Filter";
 import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
+import './style.css'
 
 function App() {
   const [woArray, setWoArray] = useState([]);
@@ -29,7 +30,9 @@ function App() {
       <NavBar />
       <Filter selected={selected} setSelected={setSelected} />
       <SearchBar />
-      <CardContainer woArray={filteredWoArray} />
+      <div>
+      <CardContainer  woArray={filteredWoArray} />
+    </div>
     </div>
   );
 }
