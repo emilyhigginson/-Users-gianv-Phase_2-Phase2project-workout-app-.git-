@@ -1,8 +1,19 @@
 import React from 'react'
+import WorkoutCard from './WorkoutCard'
 
-function CardContainer() {
+function CardContainer({woArray}) {
+  const woCards=woArray.map((wo)=>{
+    return (
+      <WorkoutCard 
+      key={wo.id}
+      wo={wo}
+      />
+    )
+  })
+
+  
   return (
-    <div>CardContainer</div>
+    <div>{woCards}</div>
   )
 }
 

@@ -66,21 +66,21 @@
     },
     {
       "id" : 10,
-      "area": "Bicep",
+      "area": "Biceps",
       "difficulty": 3,
       "instructions": "Stand with good posture and dumbbells by your sides, so the ends of them point forwards, like holding a hammer in each hand. Raise the right dumbbell up to your right shoulder, keep you elbow tucked at your side then lower it. Repeat on the left arm and keep alternating arms for the duration of the exercise.",
       "name": "Hammer Curl"
     },
     {
       "id" : 11,
-      "area": "Bicep",
+      "area": "Biceps",
       "difficulty": 5,
       "instructions": "Grasp the bar with a shoulder width grip. Take a deep breath, squeeze your glutes and brace your abs. Pull your chin towards the bar until the lats are fully contracted, then slowly lower yourself back to the start position and repeat for the assigned number of repetitions.",
       "name": "Chin-Up"
     },
     {
       "id" : 12,
-      "area": "Bicep",
+      "area": "Biceps",
       "difficulty": 2,
       "instructions": "Start standing with a dumbbell in each hand. Your elbows should rest at your sides and your forearms should extend out in front of your body. Bring the dumbbells all the way up to your shoulders by bending your elbows. Reverse the curl slowly and repeat.",
       "name": "Bicep Curl"
