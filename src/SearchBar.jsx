@@ -1,9 +1,9 @@
 import React from "react";
 
-function SearchBar({ setSearchTerm, searchTerm, isChecked, setIsChecked }) {
+function SearchBar({ setSearchTerm, searchTerm, isChecked, setIsChecked}) {
   
   function handleChange(e) {
-    // setIsChecked(e.target.checked)
+
     setIsChecked(isChecked => !isChecked)
   }
   console.log(isChecked)

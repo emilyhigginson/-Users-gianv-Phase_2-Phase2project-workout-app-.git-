@@ -9,8 +9,7 @@ function App() {
   const [woArray, setWoArray] = useState([]);
   const [selected, setSelected] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [isChecked, setIsChecked] = useState(false)
-
+  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
@@ -35,20 +34,30 @@ function App() {
     }
   });
 
-  const difficultyArray = woArray.sort(function (a, b) {
-  return a.difficulty - b.difficulty })
+  const difficultyArray = searchArray.sort(function (a, b) {
+    if (isChecked) {
+      return a.difficulty - b.difficulty;
+    } else {
+      return searchArray;
+    }
+  });
 
-  return(
+  return (
     <div className="App">
       <NavBar />
       <Filter selected={selected} setSelected={setSelected} />
       <SearchBar
-      searchTerm={searchTerm}
-      setSearchTerm={setSearchTerm} 
-      isChecked = {isChecked}
-      setIsChecked={setIsChecked}/>
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        isChecked={isChecked}
+        setIsChecked={setIsChecked}
+      />
       <div>
-        {isChecked? <CardContainer woArray={difficultyArray} /> : <CardContainer woArray={searchArray} />}
+        {isChecked ? (
+          <CardContainer woArray={difficultyArray} />
+        ) : (
+          <CardContainer woArray={searchArray} />
+        )}
       </div>
     </div>
   );
