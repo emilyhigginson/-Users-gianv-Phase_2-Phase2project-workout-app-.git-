@@ -1,8 +1,8 @@
 import React from "react";
 
-function SearchBar() {
-  function handleSearch() {
-    console.log("search");
+function SearchBar({ setSearchTerm, searchTerm }) {
+  function handleSearch(e) {
+    setSearchTerm(e.target.value);
   }
   return (
     <div className="search">
@@ -11,6 +11,7 @@ function SearchBar() {
         type="text"
         id="search"
         placeholder="Search By Name"
+        value={searchTerm}
         onChange={handleSearch}
       />
 
