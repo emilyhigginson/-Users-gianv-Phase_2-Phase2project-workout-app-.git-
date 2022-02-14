@@ -1,6 +1,13 @@
 import React from "react";
 
-function SearchBar({ setSearchTerm, searchTerm }) {
+function SearchBar({ setSearchTerm, searchTerm, isChecked, setIsChecked }) {
+  
+  function handleChange(e) {
+    // setIsChecked(e.target.checked)
+    setIsChecked(isChecked => !isChecked)
+  }
+  console.log(isChecked)
+
   function handleSearch(e) {
     setSearchTerm(e.target.value);
   }
@@ -15,7 +22,7 @@ function SearchBar({ setSearchTerm, searchTerm }) {
         onChange={handleSearch}
       />
 
-      <input id="check" type="checkbox" />
+      <input onChange= {handleChange} checked = {isChecked} id="check" type="checkbox" />
       <label for="check">Sort by Difficulty</label>
     </div>
   );
