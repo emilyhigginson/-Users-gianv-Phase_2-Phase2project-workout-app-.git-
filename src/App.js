@@ -4,6 +4,7 @@ import Filter from "./Filter";
 import MyWorkouts from "./MyWorkouts";
 import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
+import WorkoutForm from "./WorkoutForm";
 import "./style.css";
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
     });
   }
 
+  function onFormSubmit(newWorkout){
+    setWoArray([...woArray, newWorkout]);
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -67,6 +72,7 @@ function App() {
       ) : (
         <CardContainer woArray={searchArray} onAddWorkout={onAddWorkout} />
       )}
+      <WorkoutForm onFormSubmit={onFormSubmit}/>
       <MyWorkouts myWoArray={myWoArray} />
     </div>
   );

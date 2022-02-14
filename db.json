@@ -1,155 +1,151 @@
 {
-  "workouts":[
+  "workouts": [
     {
-      "id" : 1,
+      "id": 1,
       "area": "Abs",
       "difficulty": 1,
       "instructions": "Lie down on your back. Plant your feet on the floor, hip-width apart. Bend your knees and place your arms across your chest. Contract your abs and inhale. Exhale and lift your upper body keeping your head and neck relaxed. Inhale and return to the starting position.",
       "name": "Crunches"
     },
     {
-      "id" : 2,
+      "id": 2,
       "area": "Abs",
       "difficulty": 4,
       "instructions": "Start on your hands and knees. Your hands should be shoulder-width apart; your knees should be about hip-width apart. Lift your knees off the ground and step your feet back so that your legs are straight and fully extended. Hold this position for a set amount of time.",
       "name": "Plank"
     },
     {
-      "id" : 3,
+      "id": 3,
       "area": "Abs",
       "difficulty": 3,
       "instructions": "Lie down with your legs bent at the knees. Elevate your upper body so that it creates a V shape with your thighs. Twist your torso to the right, and then reverse the motion, twisting it to the left.",
       "name": "Russian Twist"
     },
-
     {
-      "id" : 4,
+      "id": 4,
       "area": "Quads",
       "difficulty": 4,
       "instructions": "Initiate the movement by sending the hips back as if you’re sitting back into an invisible chair. Bend knees to lower down as far as possible with chest lifted in a controlled movement. Keep lower back neutral. Press through heels to stand back up to starting position. Repeat.",
       "name": "Squat"
-    }
-    ,{
-      "id" : 5,
+    },
+    {
+      "id": 5,
       "area": "Quads",
       "difficulty": 1,
       "instructions": "Stand with your feet hip-width apart. Step forward and bend both knees, lowering until your knees are bent at a 90-degree angle. Shift forward onto the lead leg. Push off on both legs and step through, lifting your back leg and bringing it forward so your rear foot lands ahead of you in a lunge position.",
       "name": "Lunge"
-    }
-    ,{
-      "id" : 6,
+    },
+    {
+      "id": 6,
       "area": "Quads",
       "difficulty": 2,
       "instructions": "To start, place your entire right foot onto the step, chair, box, or bench. Press through your right heel as you step onto the bench, bringing your left foot to meet your left so you are standing on the bench. Return to the starting position by stepping down with the right foot, then the left so both feet are on the floor.",
       "name": "Step-Up"
-    }
-    ,{
-      "id" : 7,
+    },
+    {
+      "id": 7,
       "area": "Glutes",
       "difficulty": 5,
       "instructions": "Standing with your feet shoulder-width apart, grasp the bar with your hands just outside your legs. Lift the bar by driving your hips forwards, keeping a flat back. Lower the bar under control. Repeat.",
       "name": "Deadlift"
     },
     {
-      "id" : 8,
+      "id": 8,
       "area": "Glutes",
       "difficulty": 1,
       "instructions": "Lie on your back with your palms face-down by your side. Squeeze your glutes, and push on the the heels of your feet. While keeping your upper back in contact with the floor, lift your hips until you form a straight line with your back",
       "name": "Glute Bridge"
     },
     {
-      "id" : 9,
+      "id": 9,
       "area": "Glutes",
       "difficulty": 2,
       "instructions": "Stand up tall with your feet shoulder-width apart and place your hands behind the head. Start bending at the hips, push your hips back and bend over to near parallel. Return to the starting position and repeat.",
       "name": "Goodmornings"
     },
     {
-      "id" : 10,
+      "id": 10,
       "area": "Biceps",
       "difficulty": 3,
       "instructions": "Stand with good posture and dumbbells by your sides, so the ends of them point forwards, like holding a hammer in each hand. Raise the right dumbbell up to your right shoulder, keep you elbow tucked at your side then lower it. Repeat on the left arm and keep alternating arms for the duration of the exercise.",
       "name": "Hammer Curl"
     },
     {
-      "id" : 11,
+      "id": 11,
       "area": "Biceps",
       "difficulty": 5,
       "instructions": "Grasp the bar with a shoulder width grip. Take a deep breath, squeeze your glutes and brace your abs. Pull your chin towards the bar until the lats are fully contracted, then slowly lower yourself back to the start position and repeat for the assigned number of repetitions.",
       "name": "Chin-Up"
     },
     {
-      "id" : 12,
+      "id": 12,
       "area": "Biceps",
       "difficulty": 2,
       "instructions": "Start standing with a dumbbell in each hand. Your elbows should rest at your sides and your forearms should extend out in front of your body. Bring the dumbbells all the way up to your shoulders by bending your elbows. Reverse the curl slowly and repeat.",
       "name": "Bicep Curl"
     },
     {
-      "id" : 13,
+      "id": 13,
       "area": "Triceps",
       "difficulty": 2,
       "instructions": "Lie down on a bench or the floor holding a pair of dumbbells directly above your chest with your palms facing each other. Your feet should be flat on the floor. Without moving your upper arms, bend your elbows and slowly lower the weights toward the sides of your head. Avoid flaring your elbows.",
       "name": "Skull Crushers"
     },
     {
-      "id" : 14,
+      "id": 14,
       "area": "Triceps",
       "difficulty": 1,
       "instructions": "Grab a set of dumbbells, bring your torso forward and bend your knees slightly. Bring your elbows up, so that your upper arms are parallel to the floor, and kick back until your arms are fully extended. Slowly lower the weights to the starting position. Repeat.",
       "name": "Tricep Kickbacks "
     },
     {
-      "id" : 15,
+      "id": 15,
       "area": "Triceps",
       "difficulty": 4,
       "instructions": "Place your hands behind you onto a chair, so that your fingers face forward. Extend your legs and start bending your elbows. Lower your body until your arms are at a 90-degree angle. Lift your body back up until your arms are straight. Repeat.",
       "name": "Dips"
     },
     {
-      "id" : 16,
+      "id": 16,
       "area": "Shoulders",
       "difficulty": 2,
       "instructions": "Stand with feet shoulder-width apart and hold the dumbbells at shoulder height with your elbows at a 90-degree angle. Slowly lift the dumbbells above your head without fully straightening your arms. Pause at the top. Slowly return to the start position.",
       "name": "Shoulder Press"
     },
     {
-      "id" : 17,
+      "id": 17,
       "area": "Shoulders",
       "difficulty": 4,
       "instructions": "Grab two dumbbells and stand with your feet hip-width apart with a slight bend in your knees. Pretension your shoulders and hips while engaging your core. Initiate the upward movement by slowly lifting your arms away from your body. Pause at the top of the movement.",
       "name": "Lateral Raise"
     },
     {
-      "id" : 18,
+      "id": 18,
       "area": "Triceps",
       "difficulty": 3,
       "instructions": "Raise both arms out to your side, on an exhale. Keep a soft bend in your elbows. .. Lower the weight back to the start position as you inhale. Avoid hunching your shoulders, and keep your chin tucked to maintain a neutral spine during the exercise.",
       "name": "Reverse Fly"
     },
     {
-      "id" : 19,
+      "id": 19,
       "area": "Chest",
       "difficulty": 4,
       "instructions": "Get down on all fours, placing your hands slightly wider than your shoulders. Straighten your arms and legs. Lower your body until your chest nearly touches the floor. Pause, then push yourself back up. Repeat.",
       "name": "Push-Up"
     },
     {
-      "id" : 20,
+      "id": 20,
       "area": "Chest",
       "difficulty": 2,
       "instructions": "Lie down on the mat with a dumbbell in each hand, your arms up, and the palms of your hands facing each other. With your elbows slightly bent, lower your arms out to sides until you feel a stretch in your chest muscles. Return to the starting position and repeat the movement.",
       "name": "Chest Fly"
     },
     {
-      "id" : 21,
+      "id": 21,
       "area": "Chest",
       "difficulty": 3,
       "instructions": "Lie on your back on a flat bench. Press your feet firmly into the ground and keep your hips on the bench throughout the entire movement. Keep your core engaged and maintain a neutral spine position throughout the movement. Slowly lift the bar or dumbbells off the rack, if using.",
       "name": "Bench Press"
     }
-  
-  
-  
   ]
 }
