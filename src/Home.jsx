@@ -46,7 +46,7 @@ function Home({woArray, setWoArray, myWoArray, setMyWoArray,}) {
   }
 
   function onFormSubmit(newWorkout) {
-    setWoArray([...woArray, newWorkout]);
+    setWoArray([newWorkout, ...woArray]);
   }
 
   return (

@@ -26,7 +26,7 @@ function WorkoutCard({ wo, onAddWorkout }) {
   return (
     <div className="card" >
       <div className="modalCard" style={{display:style}}>
-        <button onClick={toggleCard}>x</button>
+        <button className="closeModal" onClick={toggleCard}>x</button>
         <h2>How to: {name} </h2>
         <p>{instructions}</p>
       </div>

@@ -181,6 +181,13 @@
       "instructions": "kick back",
       "name": "RAMEN",
       "id": 26
+    },
+    {
+      "area": "Abs",
+      "difficulty": "1",
+      "instructions": "sa",
+      "name": "ffas",
+      "id": 27
     }
   ]
 }
