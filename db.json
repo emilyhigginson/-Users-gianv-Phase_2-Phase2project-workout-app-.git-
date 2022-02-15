@@ -188,6 +188,13 @@
       "instructions": "sa",
       "name": "ffas",
       "id": 27
+    },
+    {
+      "area": "Quads",
+      "difficulty": "1",
+      "instructions": "exercise",
+      "name": "new",
+      "id": 28
     }
   ]
 }

@@ -103,9 +103,9 @@ button {
   padding: 3px 6px;
 }
 
+
 button:hover {
-  background: #44c83d;
-  color: #044700;
+  background: #044700;
 }
 .filter {
   grid-area: 2 / 1 / 3 / 2;
@@ -179,6 +179,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
@@ -189,6 +190,10 @@ button:hover {
   padding: 5px 20px;
   margin: 15px;
   background-color: #c9dbca;
+}
+.card:hover{
+  box-shadow: 2px -2px 5px #e7b90c  ;;
+  
 }
 .workoutName {
   padding: 0px;
@@ -238,6 +243,9 @@ button:hover {
   right: 20px;
   font-size: 2rem;
   cursor: pointer;
+}
+.closeModal:hover{
+  background:transparent;
 }
 
 #overlay {
