@@ -1,6 +1,6 @@
 TUESDAY GOALS //
 
-- images for muscle groups 
+- fix checkbox
 - fix button 
 - delete feature 
 - react router !!

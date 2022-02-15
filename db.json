@@ -146,6 +146,27 @@
       "difficulty": 3,
       "instructions": "Lie on your back on a flat bench. Press your feet firmly into the ground and keep your hips on the bench throughout the entire movement. Keep your core engaged and maintain a neutral spine position throughout the movement. Slowly lift the bar or dumbbells off the rack, if using.",
       "name": "Bench Press"
+    },
+    {
+      "area": "Quads",
+      "difficulty": "3",
+      "instructions": "kick back",
+      "name": "RAMEN",
+      "id": 22
+    },
+    {
+      "area": "Quads",
+      "difficulty": "2",
+      "instructions": "qsq",
+      "name": "sqs",
+      "id": 23
+    },
+    {
+      "area": "Triceps",
+      "difficulty": "3",
+      "instructions": "bike",
+      "name": "bike",
+      "id": 24
     }
   ]
 }
