@@ -1,19 +1,18 @@
-/*color palette
-#A8E8F9
-#00537A
-#013C58
-#F5A201
-#FFBA42
-#FFD35B
-*/
+/* #e7b90c yellow
+#856e0c brown
+#c3cc78 light green
+#5d6219 dark green
+#c9dbca blueish */
 
 * {
   margin: none;
   padding: none;
-  font-family: "Inter", sans-serif;
+  font-family: "KoHo", sans-serif;
+  font-weight: bold;
+  color: #083103;
 }
 
-.App {
+.home {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -36,21 +35,77 @@
 }
 
 .title {
-  color: #ffba42;
-  background-color: #013c58;
+  background-color: #c3cc78;
   align-self: flex-start;
   padding: 0px 0px 10px 10px;
   flex-grow: 6;
   margin-top: 0px;
   font-size: 50px;
-  font-family: "KoHo", sans-serif;
+  color: #044700;
 }
 
-.toggleHome {
+.links {
+  text-decoration: none;
+
+  background-color: #c3cc78;
   margin: 0;
-  height: 75px;
+  height: 60px;
   border: none;
+  padding: 15px 10px 0px 15px;
   border-radius: 0px;
+  text-align: center;
+}
+
+.links:hover,
+.links:active {
+  text-decoration: none;
+  color: #044700;
+
+  background-color: #e7b90c;
+  border: 1px solid #e7b90c;
+  margin: 0;
+  height: 59px;
+
+  border-radius: 0px;
+}
+
+/* input styling */
+
+.input {
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #044700;
+  width: 100%;
+  max-width: 224px;
+  height: 40px;
+  padding: 10px 10px;
+  margin: 5px 10px;
+  border-color: #044700;
+}
+
+select {
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 224px;
+  height: 40px;
+  padding: 10px 10px;
+  margin: 5px 10px;
+  border-color: #044700;
+}
+
+button {
+  margin: 5px;
+  background: #c3cc78;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #044700;
+  padding: 3px 6px;
+}
+
+button:hover {
+  background: #44c83d;
+  color: #044700;
 }
 .filter {
   grid-area: 2 / 1 / 3 / 2;
@@ -62,12 +117,11 @@
 }
 .search {
   grid-area: 2 / 2 / 3 / 4;
-  align-items:center;
+  align-items: center;
   display: flex;
-  flex-direction:row;
-  flex-wrap:nowrap;
-  align-items:space-evenly;
-
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: space-evenly;
 }
 
 .checkbox {
@@ -76,14 +130,13 @@
   width: 16px;
   height: 16px;
 
-  border-color: #013c58;
+  border-color: #044700;
   -webkit-appearance: none;
   border: 1px solid black;
   padding-top: 5px;
-  vertical-align:top;
+  vertical-align: top;
 }
-.sort{
-  color: #013c58;
+.sort {
   font-size: 16px;
 }
 .checkbox:active,
@@ -96,7 +149,7 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .checkbox:checked:after {
-  background-color:#013c58;
+  background-color: #013c58;
   content: "\2714";
   font-size: 14px;
   position: absolute;
@@ -104,11 +157,12 @@
   left: 3px;
 }
 
+
+
 .myWorkouts {
   grid-area: 4/ 4/ 2/ 5;
 }
-
-
+/* card styling */
 .cardDisplay {
   display: flex;
   flex-direction: row;
@@ -121,7 +175,7 @@
 
 .card {
   border-radius: 10px;
-  border-color: #00537a;
+  border-color: #044700;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +188,7 @@
   height: 243px;
   padding: 5px 20px;
   margin: 15px;
-  background-color: #a8e8f9;
+  background-color: #c9dbca;
 }
 .workoutName {
   padding: 0px;
@@ -151,39 +205,41 @@
   height: 100px;
   border-radius: 10px;
 }
-.input {
-  box-sizing: border-box;
-  border-radius: 10px;
+
+.modalCard {
+  display: none;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  line-height: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+
+  z-index: 10;
+  padding: 20px 20px;
+  border-radius: 20px;
+  border: solid rgba(6, 75, 59);
+  margin-bottom: 20px;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
   width: 100%;
-  max-width: 224px;
-  height: 40px;
-  padding: 10px 10px;
-  margin: 5px 10px;
-  border-color: #013c58;
-
-}
-
-select {
-  box-sizing: border-box;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 224px;
-  height: 40px;
-  padding: 10px 10px;
-  margin: 5px 10px;
-  border-color: #013c58;
-}
-
-button {
-  margin: 5px;
-  background: #013c58;
-  color: #ffba42;
-  border-radius: 10px;
-  border: 1px solid #013c58;
-  stroke: #ffd35b;
-}
-
-button:hover {
-  background-color: #ffba42;
-  color: #013c58;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
 }

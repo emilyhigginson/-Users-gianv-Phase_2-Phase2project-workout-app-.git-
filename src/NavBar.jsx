@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-
+import { NavLink } from "react-router-dom";
+import home from './fonts/foundation_black_24dp.svg'
+import weight from './fonts/fitness_center_black_24dp.svg'
 function NavBar() {
-  const [home, setHome] = useState(true);
-
-  function toggleHome() {
-    setHome((home) => !home);
-  }
   return (
-    <div  className = "navBar" onClick={toggleHome}>
+    <div className="navBar">
       <h1 className="title">git commit -m "Git Fit"</h1>
-      <button className="toggleHome">{home ? " Go To My Workouts" : "Back To Home"}</button>
+      <NavLink to="/" className="links" exact>
+        Home <br></br><img src={home}/>
+      </NavLink>
+      <NavLink
+        to="/myworkouts"
+        activeClassName="active"
+        exact
+        className="links"
+      >
+        My Workouts<br></br><img src={weight}/>
+      </NavLink>
     </div>
   );
 }

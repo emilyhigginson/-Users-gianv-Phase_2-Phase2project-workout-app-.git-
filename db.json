@@ -167,6 +167,20 @@
       "instructions": "bike",
       "name": "bike",
       "id": 24
+    },
+    {
+      "area": "Quads",
+      "difficulty": "3",
+      "instructions": "kick back",
+      "name": "RAMEN",
+      "id": 25
+    },
+    {
+      "area": "Quads",
+      "difficulty": "3",
+      "instructions": "kick back",
+      "name": "RAMEN",
+      "id": 26
     }
   ]
 }

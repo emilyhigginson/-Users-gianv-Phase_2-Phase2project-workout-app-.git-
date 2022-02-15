@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import MuscleImage from "./MuscleImage";
 
 function WorkoutCard({ wo, onAddWorkout }) {
-  const [blurb, setBlurb] = useState(true);
   const [isAdded, setIsAdded] = useState(false)
+  const [style, setStyle]=useState('none')
 
   const { area, difficulty, instructions, name } = wo;
 
-  function toggleCard() {
-    setBlurb((blurb) => !blurb);
+  function toggleCard(e) {
+    if (style==='none'){
+      setStyle('block')
+    } else if (style==='block'){
+      setStyle('none')
+    }
+    
   }
+
+
 
   function handleAddWorkout() {
     setIsAdded(isAdded => !isAdded)
@@ -18,8 +25,13 @@ function WorkoutCard({ wo, onAddWorkout }) {
 
   return (
     <div className="card" >
+      <div className="modalCard" style={{display:style}}>
+        <button onClick={toggleCard}>x</button>
+        <h2>How to: {name} </h2>
+        <p>{instructions}</p>
+      </div>
       <p className="workoutName" onClick={toggleCard} >{name}</p>
-      <p className="muscleGroup">{blurb ? area : instructions}</p>
+      <p className="muscleGroup">{area}</p>
       <MuscleImage area={area} />
       <p>Difficulty: {difficulty}/5</p>
 
