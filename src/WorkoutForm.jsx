@@ -29,10 +29,10 @@ function handleChange(e) {
   }
 
   return (
-    <div>Workout Form
+    <div className ="workoutForm"><h3>Add an Exercise </h3>
       <form onSubmit= {handleSubmit}>
         <div >
-          <label for='text1'>Workout Name:</label>
+          <label for='text1'>Exercise Name:</label>
           <input onChange={handleChange} name='name' value= {formData.name} type='text' id='text1' />
         </div>
         <div>
@@ -40,7 +40,7 @@ function handleChange(e) {
           <input onChange={handleChange} name= 'instructions' value= {formData.instructions} id='textarea1' ></input>
         </div>
         <div>
-          <label for='select1'>Select Muscle Group</label>
+          <label for='select1'>Select Muscle Group</label><br></br>
           <select onChange={handleChange}name = 'area' id='select1' placeholder='Field Textarea'>
             <option value='Select'>Select</option>
             <option value='Abs'>Abs</option>

@@ -7,8 +7,9 @@ function NavBar() {
     setHome((home) => !home);
   }
   return (
-    <div onClick={toggleHome}>
-      <button>{home ? " Go To My Workouts" : "Back To Home"}</button>
+    <div  className = "navBar" onClick={toggleHome}>
+      <h1 className="title">git commit -m "Git Fit"</h1>
+      <button className="toggleHome">{home ? " Go To My Workouts" : "Back To Home"}</button>
     </div>
   );
 }

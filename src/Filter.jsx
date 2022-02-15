@@ -9,7 +9,7 @@ function Filter({setSelected}) {
 
   return (
 
-    <div>
+    <div className = "filter">
       <label for="muscles">Filter by Muscle Group:</label>
       <select onChange={handleFilter} name="area" id="filter">
         <option value="All">All</option>

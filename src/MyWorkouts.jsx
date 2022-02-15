@@ -8,7 +8,7 @@ function MyWorkouts({ myWoArray }) {
   return (
     <div >
       <p>My Workouts</p>
-   <div className="cardDisplay">{myWo}</div>
+   <div className="myWorkouts">{myWo}</div>
     </div>
   );
 }

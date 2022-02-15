@@ -60,19 +60,19 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Filter selected={selected} setSelected={setSelected} />
-      <SearchBar
+      <Filter  selected={selected} setSelected={setSelected} />
+      <SearchBar 
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         isChecked={isChecked}
         setIsChecked={setIsChecked}
       />
       {isChecked ? (
-        <CardContainer woArray={difficultyArray} onAddWorkout={onAddWorkout} />
+        <CardContainer  woArray={difficultyArray} onAddWorkout={onAddWorkout} />
       ) : (
         <CardContainer woArray={searchArray} onAddWorkout={onAddWorkout} />
       )}
-      <WorkoutForm onFormSubmit={onFormSubmit}/>
+      <WorkoutForm  onFormSubmit={onFormSubmit}/>
       <MyWorkouts myWoArray={myWoArray} />
     </div>
   );
