@@ -10,7 +10,7 @@
 * {
   margin: none;
   padding: none;
-  ;
+  font-family: 'BenchNine', sans-serif;  ;
 }
 
 
@@ -29,7 +29,9 @@
     border: 2px solid black;
     border-radius: 10px;
     border-color: #00537A;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
@@ -40,5 +42,20 @@
     padding: 5px 20px;
     margin: 15px;
     background-color: #A8E8F9;
-
+}
+.workoutName{
+    padding: 0px;
+    font-size: 25px;
+    margin: 0px;
+}
+.muscleGroup{
+  padding: 0px;
+    font-size: 18px;
+    margin: 0px;
+}
+.muscleImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border-color: #00537A;
 }
