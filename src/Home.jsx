@@ -4,7 +4,7 @@ import WorkoutForm from "./WorkoutForm";
 import CardContainer from "./CardContainer";
 import Filter from "./Filter";
 
-function Home({ woArray, setWoArray, myWoArray, setMyWoArray }) {
+function Home({ woArray, setWoArray, myWoArray, setMyWoArray, addLoggedExercise}) {
   const [selected, setSelected] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [isChecked, setIsChecked] = useState(false);
@@ -40,12 +40,13 @@ function Home({ woArray, setWoArray, myWoArray, setMyWoArray }) {
         setMyWoArray([...myWoArray, {...workout, added:true}]);
       }
     })
-    console.log(wo.added);
   }
 
   function onFormSubmit(newWorkout) {
     setWoArray([newWorkout, ...woArray]);
   }
+
+  
 
   return (
     <div className="home">
@@ -57,9 +58,9 @@ function Home({ woArray, setWoArray, myWoArray, setMyWoArray }) {
         setIsChecked={setIsChecked}
       />
       {isChecked ? (
-        <CardContainer woArray={difficultyArray} onAddWorkout={onAddWorkout} />
+        <CardContainer woArray={difficultyArray} onAddWorkout={onAddWorkout} addLoggedExercise={addLoggedExercise}/>
       ) : (
-        <CardContainer woArray={searchArray} onAddWorkout={onAddWorkout} />
+        <CardContainer woArray={searchArray} onAddWorkout={onAddWorkout} addLoggedExercise={addLoggedExercise} />
       )}
       <WorkoutForm onFormSubmit={onFormSubmit} />
     </div>

@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react";
+import LoggedWoItem from "./LoggedWoItem";
 
-function CompletedWorkouts() {
+function CompletedWorkouts({ loggedWorkouts }) {
+  const logged=Object.keys(loggedWorkouts).map((wo)=>{
+    return <LoggedWoItem
+    wo={wo}
+    />
+  })
   return (
     <div>
-        <h3>My Logged Workouts</h3>
-            <div>
-
-            </div>
+      <h3>{logged}</h3>
+      <div></div>
     </div>
-  )
+  );
 }
 
-export default CompletedWorkouts
+export default CompletedWorkouts;

@@ -69,6 +69,10 @@
   border-radius: 0px;
 }
 
+.pageHeader {
+  text-align: center;
+}
+
 /* input styling */
 
 .input {
