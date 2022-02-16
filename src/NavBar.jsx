@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import home from './fonts/foundation_black_24dp.svg'
 import weight from './fonts/fitness_center_black_24dp.svg'
+import check from './fonts/check_circle_black_24dp.svg'
+
 function NavBar() {
   return (
     <div className="navBar">
@@ -17,6 +19,10 @@ function NavBar() {
       >
         My Workouts<br></br><img src={weight}/>
       </NavLink>
+      <NavLink to="/completedworkouts" className="links">
+        Completed Workouts<br></br><img src ={check}/>
+      </NavLink>
+
       
     </div>
   );

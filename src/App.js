@@ -8,7 +8,8 @@ import "./style.css";
 function App() {
   const [woArray, setWoArray] = useState([]);
   const [myWoArray, setMyWoArray] = useState([]);
-
+  const [completedWorkouts, setCompletedWorkouts] = useState([]);
+  
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
       .then((res) => res.json())

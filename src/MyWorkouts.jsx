@@ -1,17 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import WorkoutCard from "./WorkoutCard";
-import RemoveButton from "./RemoveButton";
 
 function MyWorkouts({ myWoArray }) {
-
-  const myWo= myWoArray.map((wo) => {
+const [loggedWorkout, setLoggedWorkout] = useState({name:""})
+  
+const myWo= myWoArray.map((wo) => {
     return <WorkoutCard key={wo.id} wo={wo}/>;
   });
+  const {name} = myWo
+  function handleLogWorkout(){
+    setLoggedWorkout({...loggedWorkout, name:name})
+    console.log(loggedWorkout);
+  }
   return (
-    <div >
+    <div>
       <p>My Workouts</p>
    <div className="myWorkouts">{myWo}</div>
-   <button>Log This Workout</button>
+   <button onClick={setLoggedWorkout}>Log This Workout</button>
     </div>
   );
 }
