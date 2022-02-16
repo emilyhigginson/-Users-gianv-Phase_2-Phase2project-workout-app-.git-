@@ -17,6 +17,7 @@ function NavBar() {
       >
         My Workouts<br></br><img src={weight}/>
       </NavLink>
+      
     </div>
   );
 }

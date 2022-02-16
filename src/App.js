@@ -16,15 +16,19 @@ function App() {
   }, []);
 
   return (
-    <div >
+    <div>
       <div id="overlay"></div>
       <NavBar />
       <Switch>
         <Route exact path="/myworkouts">
-          <MyWorkouts myWoArray={myWoArray} />
+          <MyWorkouts
+
+            myWoArray={myWoArray}
+          />
         </Route>
         <Route exact path="/">
           <Home
+      
             myWoArray={myWoArray}
             setWoArray={setWoArray}
             woArray={woArray}

@@ -4,10 +4,10 @@ import x from "./fonts/highlight_off_black_24dp.svg";
 import RemoveButton from "./RemoveButton"
 
 function WorkoutCard({ wo, onAddWorkout }) {
-  const [isAdded, setIsAdded] = useState(false)
+
   const [style, setStyle]=useState('none')
 
-  const { area, difficulty, instructions, name } = wo;
+  const { area, difficulty, instructions, name, added } = wo;
 
   function toggleCard(e) {
     if (style==='none'){
@@ -21,9 +21,10 @@ function WorkoutCard({ wo, onAddWorkout }) {
 
 
   function handleAddWorkout() {
-    setIsAdded(isAdded => !isAdded)
     onAddWorkout(wo)
   }
+
+
 
   return (
     <div className="card" >
@@ -38,7 +39,7 @@ function WorkoutCard({ wo, onAddWorkout }) {
         <MuscleImage area={area} />
         <p>Difficulty: {difficulty}/5</p>
       </div>   
-      <button onClick={handleAddWorkout}>{isAdded ? " Remove from Workout" : "Add to Workout"}</button>
+      <button onClick={handleAddWorkout}>{added ? 'Remove from Workout': 'Add to Workout' }</button>
     </div>
   );
   }

@@ -1,16 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import WorkoutForm from "./WorkoutForm";
 import CardContainer from "./CardContainer";
 import Filter from "./Filter";
 
-
-function Home({woArray, setWoArray, myWoArray, setMyWoArray,}) {
+function Home({ woArray, setWoArray, myWoArray, setMyWoArray }) {
   const [selected, setSelected] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [isChecked, setIsChecked] = useState(false);
-  
-
 
   const filteredWoArray = woArray.filter((workout) => {
     if (selected === "All") {
@@ -40,9 +37,10 @@ function Home({woArray, setWoArray, myWoArray, setMyWoArray,}) {
   function onAddWorkout(wo) {
     woArray.filter((workout) => {
       if (workout.id === wo.id) {
-        setMyWoArray([...myWoArray, workout]);
+        setMyWoArray([...myWoArray, {...workout, added:true}]);
       }
-    });
+    })
+    console.log(wo.added);
   }
 
   function onFormSubmit(newWorkout) {
@@ -51,7 +49,6 @@ function Home({woArray, setWoArray, myWoArray, setMyWoArray,}) {
 
   return (
     <div className="home">
-
       <Filter selected={selected} setSelected={setSelected} />
       <SearchBar
         searchTerm={searchTerm}
