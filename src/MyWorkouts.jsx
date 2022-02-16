@@ -1,5 +1,6 @@
 import React from "react";
 import WorkoutCard from "./WorkoutCard";
+import RemoveButton from "./RemoveButton";
 
 function MyWorkouts({ myWoArray }) {
   const myWo= myWoArray.map((wo) => {
