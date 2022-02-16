@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MuscleImage from "./MuscleImage";
-import x from "/Users/gianv/Phase_2/Phase2project/-Users-gianv-Phase_2-Phase2project-workout-app-.git-/src/fonts/highlight_off_black_24dp.svg";
+import x from "./fonts/highlight_off_black_24dp.svg";
 import RemoveButton from "./RemoveButton"
 
 function WorkoutCard({ wo, onAddWorkout }) {
