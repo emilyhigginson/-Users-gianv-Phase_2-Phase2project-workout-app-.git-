@@ -2,11 +2,14 @@ import React from "react";
 import LoggedWoItem from "./LoggedWoItem";
 
 function CompletedWorkouts({ loggedWorkouts }) {
-  const logged=Object.keys(loggedWorkouts).map((wo)=>{
+  
+  const logged=loggedWorkouts.map((wo)=>{
     return <LoggedWoItem
-    wo={wo}
+    key={wo.id}
+    wo={wo.loggedExercise}
     />
   })
+  console.log(logged)
   return (
     <div>
       <h3>{logged}</h3>

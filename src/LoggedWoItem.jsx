@@ -1,9 +1,9 @@
 import React from 'react'
 
-function LoggedWoItem({logged}) {
-const {logName, logArea}=logged
+function LoggedWoItem({wo}) {
+const {logName, logArea}=wo
   return (
-    <div>{logName? logName : null}</div>
+    <div>{logName}{logArea}</div>
   )
 }
 

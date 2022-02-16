@@ -4,6 +4,7 @@ import MyWorkouts from "./MyWorkouts";
 import CompletedWorkouts from "./CompletedWorkouts";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import { v4 as uuidv4 } from "uuid";
 import "./style.css";
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
   }, []);
 
   function addLoggedExercise(loggedExercise) {
-    const d = new Date();
-    d.getTime();
-    setLoggedWorkouts({ ...loggedWorkouts, [d]: loggedExercise });
+    setLoggedWorkouts({ ...loggedWorkouts, [uuidv4()]: loggedExercise });
+    
+   
   }
 
   return (
@@ -30,6 +31,7 @@ function App() {
       <Switch>
         <Route exact path="/myworkouts">
           <MyWorkouts
+            loggedWorkouts={loggedWorkouts}
             addLoggedExercise={addLoggedExercise}
             myWoArray={myWoArray}
           />
