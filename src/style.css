@@ -278,3 +278,6 @@ button:hover {
   cursor: pointer;
   backdrop-filter: blur(3px);
 }
+.workoutGroup{
+  border: 1px solid #044700;
+}

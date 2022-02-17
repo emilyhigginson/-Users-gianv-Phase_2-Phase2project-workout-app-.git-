@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import WorkoutCard from "./WorkoutCard";
 
 function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts, 
   // setTitle, title
  })
   {
+  const[isClicked, setIsClicked] = useState(false)
+
   const myWo = myWoArray.map((wo) => {
     return (
-      <WorkoutCard key={wo.id} wo={wo} addLoggedExercise={addLoggedExercise} />
+      <WorkoutCard key={wo.id} wo={wo} addLoggedExercise={addLoggedExercise} isClicked= {isClicked} setIsClicked={setIsClicked}/>
     );
   });
 
@@ -21,7 +23,8 @@ function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts,
     })
       .then((response) => response.json())
       .then((loggedWo) => addLoggedExercise(loggedWo));
-    window.location.reload();
+      window.location.reload();
+
   }
 
   // function handleTitle(e) {
@@ -41,7 +44,7 @@ function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts,
         <input onChange={handleTitle} value={title} type="text" />
       </label> */}
       <br></br>
-      <button onClick={postWorkout}>Log This Workout</button>
+      {isClicked ? <button onClick={postWorkout}> Log this Workout </button> : null}
     </>
   );
 }

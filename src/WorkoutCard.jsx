@@ -4,7 +4,7 @@ import x from "./fonts/highlight_off_black_24dp.svg";
 import trash from '../src/fonts/delete_forever_black_24dp.svg'
 
 
-function WorkoutCard({ wo, onAddWorkout, addLoggedExercise }) {
+function WorkoutCard({ wo, onAddWorkout, addLoggedExercise, isClicked, setIsClicked }) {
   const { area, difficulty, instructions, name, added } = wo;
 
   const [style, setStyle] = useState("none");
@@ -26,7 +26,9 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise }) {
 
   function handleLog() {
     addLoggedExercise({ logName: name, logArea: area });
+    setIsClicked(true)
     handleRemove()
+
   }
 
   return (

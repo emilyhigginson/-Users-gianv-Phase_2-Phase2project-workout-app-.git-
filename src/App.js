@@ -19,14 +19,10 @@ function App() {
       .then((data) => setWoArray(data));
   }, []);
 
- 
-console.log(loggedWorkouts)
-  
   function addLoggedExercise(loggedExercise) {
     setLoggedWorkouts({...loggedWorkouts, [uuidv4()]: loggedExercise 
     });
   }
-
 
   return (
     <div>
