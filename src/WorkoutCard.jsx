@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import MuscleImage from "./MuscleImage";
 import x from "./fonts/highlight_off_black_24dp.svg";
-import RemoveButton from "./RemoveButton";
+import trash from '../src/fonts/delete_forever_black_24dp.svg'
+
 
 function WorkoutCard({ wo, onAddWorkout, addLoggedExercise }) {
   const { area, difficulty, instructions, name, added } = wo;
 
   const [style, setStyle] = useState("none");
+  const [isShowing, setIsShowing]=useState(true)
 
   function toggleCard(e) {
     if (style === "none") {
@@ -18,13 +20,17 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise }) {
   function handleAddWorkout() {
     onAddWorkout(wo);
   }
+  function handleRemove(){
+    setIsShowing('none')
+  }
 
   function handleLog() {
     addLoggedExercise({ logName: name, logArea: area });
+    handleRemove()
   }
 
   return (
-    <div className="card">
+    <div className="card" style={{display: isShowing}}>
       <div className="modalCard" style={{ display: style }}>
         <button className="closeModal" onClick={toggleCard}>
           <img src={x} />
@@ -41,7 +47,9 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise }) {
         <p>Difficulty: {difficulty}/5</p>
       </div>
       {added ? (
+        <>
         <button onClick={handleLog}>Complete Exercise</button>
+        <button className="trash" onClick={handleRemove}><img src={trash}/></button></>
       ) : (
         <button onClick={handleAddWorkout}>Add to Workout </button>
       )}

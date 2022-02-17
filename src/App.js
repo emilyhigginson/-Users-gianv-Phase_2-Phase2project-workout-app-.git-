@@ -11,6 +11,7 @@ function App() {
   const [woArray, setWoArray] = useState([]);
   const [myWoArray, setMyWoArray] = useState([]);
   const [loggedWorkouts, setLoggedWorkouts] = useState({});
+  // const [title, setTitle]=useState('')
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
@@ -18,11 +19,14 @@ function App() {
       .then((data) => setWoArray(data));
   }, []);
 
+ 
+console.log(loggedWorkouts)
+  
   function addLoggedExercise(loggedExercise) {
-    setLoggedWorkouts({ ...loggedWorkouts, [uuidv4()]: loggedExercise });
-    
-   
+    setLoggedWorkouts({...loggedWorkouts, [uuidv4()]: loggedExercise 
+    });
   }
+
 
   return (
     <div>
@@ -31,6 +35,8 @@ function App() {
       <Switch>
         <Route exact path="/myworkouts">
           <MyWorkouts
+          // setTitle={setTitle}
+          // title={title}
             loggedWorkouts={loggedWorkouts}
             addLoggedExercise={addLoggedExercise}
             myWoArray={myWoArray}

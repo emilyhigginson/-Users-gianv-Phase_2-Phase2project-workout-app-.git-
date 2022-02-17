@@ -10,25 +10,25 @@ import tricep from './MuscleImages/tricep.png'
 function MuscleImage({area}) {
 
     let image = "";
-    if (area =="Abs") {
+    if (area ==="Abs") {
         image = abs
     }
-    else if (area =="Biceps") {
+    else if (area ==="Biceps") {
         image = bicep;
     }  
-    else if (area== "Chest") {
+    else if (area=== "Chest") {
       image = chest;
     }
-    else if (area == "Glutes") {
+    else if (area === "Glutes") {
         image = glute;
     }
-    else if (area == "Quads"){
+    else if (area === "Quads"){
         image = quad;
     }
-    else if (area == "Shoulders"){
+    else if (area === "Shoulders"){
         image = shoulder;
     }
-    else if (area == "Triceps"){
+    else if (area === "Triceps"){
         image = tricep;
     }
 

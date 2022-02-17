@@ -1,10 +1,16 @@
-import React from 'react'
+import React from "react";
 
-function LoggedWoItem({wo}) {
-const {logName, logArea}=wo
+function LoggedWoItem({ logEx }) {
+  const { logName, logArea } = logEx;
+  
+
   return (
-    <div>{logName}{logArea}</div>
-  )
+    <div className="loggedWorkout">
+      <h3>{logName}</h3>
+      {logArea===undefined? null :<h5>({logArea})</h5> }
+      
+    </div>
+  );
 }
 
-export default LoggedWoItem
+export default LoggedWoItem;

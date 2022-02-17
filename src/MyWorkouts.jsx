@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import WorkoutCard from "./WorkoutCard";
 
-function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts }) {
+function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts, 
+  // setTitle, title
+ })
+  {
   const myWo = myWoArray.map((wo) => {
     return (
       <WorkoutCard key={wo.id} wo={wo} addLoggedExercise={addLoggedExercise} />
     );
   });
-
 
   function postWorkout() {
     fetch("http://localhost:3000/logged", {
@@ -19,14 +21,26 @@ function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts }) {
     })
       .then((response) => response.json())
       .then((loggedWo) => addLoggedExercise(loggedWo));
+    window.location.reload();
   }
+
+  // function handleTitle(e) {
+  //   const woTitle = e.target.value;
+  //   setTitle(woTitle);
+  // }
 
   return (
     <>
       <div>
-        <h1 className="pageHeader">My Workouts</h1>
+        <h1 className="pageHeader">Today's Workout</h1>
+
         <div className="myWorkouts">{myWo}</div>
       </div>
+      {/* <label>
+        Name Today's Workout! <br></br>
+        <input onChange={handleTitle} value={title} type="text" />
+      </label> */}
+      <br></br>
       <button onClick={postWorkout}>Log This Workout</button>
     </>
   );

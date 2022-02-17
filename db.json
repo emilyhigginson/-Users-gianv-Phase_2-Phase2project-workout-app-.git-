@@ -226,6 +226,147 @@
     }
   ],
   "logged": [
-    
+    {
+      "19578dcc-e2c2-4c14-922a-b17329371d48": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 1
+    },
+    {
+      "80e6604b-8f73-4708-968e-3d4f7eab42ce": {
+        "logName": "Russian Twist",
+        "logArea": "Abs"
+      },
+      "3baacabc-56f4-44e8-b12a-a67a4f2a2149": {
+        "logName": "Russian Twist",
+        "logArea": "Abs"
+      },
+      "267348fe-997b-4054-88e4-9c71ea5ee1f9": {
+        "logName": "Russian Twist",
+        "logArea": "Abs"
+      },
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "": {
+        "logName": "Russian Twist",
+        "logArea": "Abs"
+      },
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "": "",
+      "d061f76e-eac7-432e-b0ce-fa85faf7e43f": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "06d88ee5-6092-4139-972d-5788249dca49": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 7
+    },
+    {
+      "": "",
+      "6098ae0e-6e0b-4d13-85fe-092e9cadddad": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "49806dab-ca9c-48ad-adfb-8548cfdcf51a": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 8
+    },
+    {
+      "title": "",
+      "13e51680-8e5b-4cab-a4f4-e05885578380": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "813312c4-2b6b-4783-89a7-9a22b84c41c6": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 9
+    },
+    {
+      "title": [
+        ""
+      ],
+      "369680ee-ab5f-47c1-86f8-9bbb31c6a7f2": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "e4678408-b3bd-4180-b559-76946eb73b42": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 10
+    },
+    {
+      "title": [
+        ""
+      ],
+      "bf089dcd-9bc3-4461-8dbb-890912063dba": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "b9e22f60-5619-43c3-9792-fa2cdc986452": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 11
+    },
+    {
+      "": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 12
+    },
+    {
+      "77e011c9-7fe3-4a1e-9525-2a84055b2a12": {
+        "logName": "Crunches",
+        "logArea": "Abs"
+      },
+      "50f0bf0e-1aaa-492b-a8b8-398f4e9a0f48": {
+        "logName": "Crunches",
+        "logArea": "Abs"
+      },
+      "0692f75c-a9f1-4716-86d1-08b6aa7f9e81": {
+        "logName": "Crunches",
+        "logArea": "Abs"
+      },
+      "id": 13
+    },
+    {
+      "61f4a9c4-c1d0-42d9-ad16-4352a593dde5": {
+        "logName": "Step-Up",
+        "logArea": "Quads"
+      },
+      "24d1c3f5-aeb3-46b0-bc23-97ec7167daea": {
+        "logName": "Deadlift",
+        "logArea": "Glutes"
+      },
+      "46967942-452c-4470-b6e2-506c0717fd2a": {
+        "logName": "Russian Twist",
+        "logArea": "Abs"
+      },
+      "id": 14
+    },
+    {
+      "id": 15
+    }
   ]
 }
