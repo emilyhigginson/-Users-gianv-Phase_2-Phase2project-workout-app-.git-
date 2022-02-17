@@ -2,10 +2,7 @@ import React from "react";
 
 function LoggedWoItem({ logEx }) {
   const { logName, logArea } = logEx;
-  
-  const index = logEx.findIndex(object => {
-    return object.id 
-  })
+
   const d = new Date();
   const weekDays = [
     "Monday",
@@ -16,7 +13,7 @@ function LoggedWoItem({ logEx }) {
     "Saturday",
     "Sunday",
   ];
-  
+
   const day = weekDays[d.getDay()];
   const month = d.getMonth() + 1;
   const date = d.getDate() + 1;
@@ -26,15 +23,16 @@ function LoggedWoItem({ logEx }) {
   const timeStamp =
     day + ", " + month + "/" + date + " at " + americanHours() + ":" + minute;
 
-console.log(logEx)
   return (
-    
-    <div className = "workoutGroup">
-     {/* {i = 1 ? <h3> {timeStamp}</h3> : null} */}
-      <h3>{logName}</h3>
-      {logArea===undefined? null :<h5>({logArea})</h5> }
-      
-    </div>
+    <>
+      <div className="loggedWorkout">
+        <p>{logArea === undefined ? "Workout Completed on: " + timeStamp : null}</p>
+        <div>
+          <h3>{logName}</h3>
+          {logArea === undefined ? null : <h5>({logArea})</h5>}
+        </div>
+      </div>
+    </>
   );
 }
 
