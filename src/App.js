@@ -19,10 +19,20 @@ function App() {
       .then((data) => setWoArray(data));
   }, []);
 
+  let d = Date.now();
+  // console.log(time);
+  
+  const seconds=Math.floor((d/1000) % 60)
+  const minutes=Math.floor((d/ (1000*60)) % 60)
+  const hours=Math.floor((d/(1000*60*60) % 24))
+  const AmericanHours = hours-5
+
+  const timestamp = AmericanHours + ":" + minutes + ":" + seconds
   function addLoggedExercise(loggedExercise) {
-    setLoggedWorkouts({...loggedWorkouts, [uuidv4()]: loggedExercise 
+    setLoggedWorkouts({...loggedWorkouts, timestamp, [uuidv4()]: loggedExercise
     });
-  }console.log(loggedWorkouts);
+  }
+  console.log(timestamp);
 
   return (
     <div>

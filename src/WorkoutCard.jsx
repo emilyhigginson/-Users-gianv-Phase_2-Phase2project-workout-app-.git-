@@ -13,14 +13,6 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise, isClicked, setIsClic
   let d = Date.now();
   // console.log(time);
   
-  const seconds=Math.floor((d/1000) % 60)
-  const minutes=Math.floor((d/ (1000*60)) % 60)
-  const hours=Math.floor((d/(1000*60*60) % 24))
-  const AmericanHours = hours-5
-
-  const timestamp = AmericanHours + ":" + minutes + ":" + seconds
-  
-  console.log(timestamp);
 
   function toggleCard(e) {
     if (style === "none") {
@@ -37,7 +29,7 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise, isClicked, setIsClic
   }
 
   function handleLog() {
-    addLoggedExercise({ logName: name, logArea: area, logTime: timestamp });
+    addLoggedExercise({ logName: name, logArea: area});
     setIsClicked(true)
     handleRemove()
 
