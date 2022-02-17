@@ -1,5 +1,5 @@
 import { Route, Switch, NavLink } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,Fragment   } from "react";
 import MyWorkouts from "./MyWorkouts";
 import CompletedWorkouts from "./CompletedWorkouts";
 import NavBar from "./NavBar";
@@ -38,11 +38,13 @@ function App() {
   return (
     <div>
       <div id="overlay"></div>
-      <NavBar />
+      <h1 className="title">Git Commit, Git Fit</h1>
       <Switch>
         <Route exact path="/" >
            <Home/>
         </Route>
+        <Fragment>
+        <NavBar />
         <Route exact path="/myworkouts">
           <MyWorkouts
             loggedWorkouts={loggedWorkouts}
@@ -62,6 +64,7 @@ function App() {
             setMyWoArray={setMyWoArray}
           />
         </Route>
+        </Fragment>
       </Switch>
     </div>
   );

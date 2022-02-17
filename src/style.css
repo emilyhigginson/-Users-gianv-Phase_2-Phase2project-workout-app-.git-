@@ -26,6 +26,8 @@
   align-items: flex-start;
   align-content: stretch;
   grid-area: 1 / 1 / 2 / 6;
+  background-color:rgb(201, 239, 202);
+
   /* height: 250px;
   margin-bottom: 20px; */
   /* background-image: url("https://cdn.pixabay.com/photo/2022/01/23/15/39/plants-6961142_960_720.png"); */
@@ -41,33 +43,47 @@
   flex-grow: 6;
   margin-top: 0px;
   font-size: 50px;
+  margin-bottom: 0px;
   color: #044700;
 }
 
 .links {
   text-decoration: none;
-
-  background-color:rgb(201, 239, 202);
   margin: 0;
   height: 60px;
   border: none;
-  padding: 15px 10px 0px 15px;
   border-radius: 0px;
   text-align: center;
+  display: flex; 
+  align-items: center;  
 }
-
-.links:hover,
-.links:active {
+span {
+padding-left: 5px;
+}
+/* span:hover{
+  color: white;
+} */
+.links:active{
   text-decoration: none;
-  color: #044700;
-
-  background-color: #e7b90c;
-  border: 1px solid #e7b90c;
+  background-color:  rgb(27, 135, 96);
+  border: 1px;
+  border-radius: 20px;
+  color: white ;
   margin: 0;
   height: 59px;
-
   border-radius: 0px;
 }
+.links:hover>span{
+  text-decoration: none;
+  background-color:  rgb(27, 135, 96);
+  border: 1px;
+  border-radius: 20px;
+  color: white ;
+  margin: 0;
+  height: 59px;
+  border-radius: 0px;
+}
+
 
 .pageHeader {
   text-align: center;
