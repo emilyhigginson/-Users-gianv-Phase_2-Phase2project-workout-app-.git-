@@ -20,70 +20,86 @@
   grid-row-gap: 0px;
 }
 .navBar {
+  margin-bottom: 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
   grid-area: 1 / 1 / 2 / 6;
-  background-color:rgb(201, 239, 202);
-
-  /* height: 250px;
-  margin-bottom: 20px; */
-  /* background-image: url("https://cdn.pixabay.com/photo/2022/01/23/15/39/plants-6961142_960_720.png"); */
-  /* background-repeat: no-repeat;
-  background-size: 100% 600%;
-  background-position: center; */
+  background-color: rgb(201, 239, 202);
+  padding: 10px 30px;
+  height: 30px;
+  vertical-align: middle;
 }
 
 .title {
-  background-color:rgb(201, 239, 202);
+  background-color: rgb(201, 239, 202);
   align-self: flex-start;
   padding: 0px 0px 10px 10px;
   flex-grow: 6;
-  margin-top: 0px;
-  font-size: 50px;
   margin-bottom: 0px;
+  font-size: 50px;
+
   color: #044700;
 }
 
 .links {
   text-decoration: none;
-  margin: 0;
+  top: 7px;
+
   height: 60px;
   border: none;
   border-radius: 0px;
+  height: 40px;
+  padding: 0px 10px;
   text-align: center;
-  display: flex; 
-  align-items: center;  
+  display: flex;
+  align-items: center;
+  margin: 0px 10px 10px 10px;
 }
 span {
-padding-left: 5px;
+  padding-left: 5px;
 }
 /* span:hover{
   color: white;
 } */
-.links:active{
+.links:active:after {
   text-decoration: none;
-  background-color:  rgb(27, 135, 96);
+  top: 7px;
+  background-color: rgb(27, 135, 96);
+
   border: 1px;
-  border-radius: 20px;
-  color: white ;
-  margin: 0;
-  height: 59px;
-  border-radius: 0px;
+  border-radius: 25px;
+  height: 40px;
+  padding: 0px 10px;
+  color: white;
+  margin: 0px 10px 10px 10px;
 }
-.links:hover>span{
+.links:hover > span {
   text-decoration: none;
-  background-color:  rgb(27, 135, 96);
-  border: 1px;
+  color: white;
+}
+.links:hover {
+  background-color: rgb(27, 135, 96);
+  top: 7px;
+  height: 40px;
+  padding: 0px 10px;
+  color: white;
   border-radius: 20px;
-  color: white ;
-  margin: 0;
-  height: 59px;
-  border-radius: 0px;
+  margin: 0px 10px 10px 10px;
+}
+.links:focus {
+  background-color: rgb(27, 135, 96);
+  top: 7px;
+  height: 40px;
+  padding: 0px 10px;
+  margin: 0px 10px 10px 10px;
+  border-radius: 20px;
 }
 
+.links:focus > span {
+  color: white;
+}
 
 .pageHeader {
   text-align: center;
@@ -123,7 +139,6 @@ button {
   padding: 3px 6px;
 }
 
-
 button:hover {
   background: #044700;
 }
@@ -142,8 +157,7 @@ button:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: space-evenly;
-  margin-left:10px
-  
+  margin-left: 10px;
 }
 
 .checkbox {
@@ -157,21 +171,19 @@ button:hover {
   border: 1px solid black;
   padding-top: 5px;
   vertical-align: top;
-  margin: 0px 25px
+  margin: 0px 25px;
 }
 .sort {
   font-size: 16px;
 }
 .checkbox:active,
 .checkbox:checked:active {
-  
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
     inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .checkbox:checked {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  
 }
 .checkbox:checked:after {
   /* background-color: #013c58; */
@@ -180,10 +192,7 @@ button:hover {
   position: relative;
   bottom: 8px;
   left: 0px;
-  
 }
-
-
 
 .myWorkouts {
   grid-area: 4/ 4/ 2/ 5;
@@ -195,7 +204,7 @@ button:hover {
   align-content: space-around;
 }
 /* card styling */
-.cardDisplay  {
+.cardDisplay {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -223,9 +232,8 @@ button:hover {
   margin: 15px;
   background-color: #c9dbca;
 }
-.card:hover{
-  box-shadow: 2px -2px 5px #e7b90c  ;;
-  
+.card:hover {
+  box-shadow: 2px -2px 5px #e7b90c;
 }
 .workoutName {
   padding: 0px;
@@ -243,17 +251,16 @@ button:hover {
   border-radius: 10px;
 }
 .trash {
-  position:relative;
+  position: relative;
   bottom: 250px;
   left: 115px;
   background: transparent;
-  border:none;
+  border: none;
 }
 .trash:hover {
   background: transparent;
-  border:none;
+  border: none;
 }
-
 
 .modalCard {
   display: none;
@@ -279,8 +286,8 @@ button:hover {
 }
 
 .closeModal {
-  background:transparent;
-  border:none;
+  background: transparent;
+  border: none;
   color: #5d6219;
   position: absolute;
   top: 10px;
@@ -288,8 +295,8 @@ button:hover {
   font-size: 2rem;
   cursor: pointer;
 }
-.closeModal:hover{
-  background:transparent;
+.closeModal:hover {
+  background: transparent;
 }
 
 #overlay {
@@ -307,48 +314,47 @@ button:hover {
   backdrop-filter: blur(3px);
 }
 
-
-.timeStamp{
+.timeStamp {
   background-color: #044700;
   color: white;
-  margin-top:20px;
-  
+  margin-top: 20px;
 }
-.log{
+.log {
   display: flex;
-  flex-flow:  wrap;
+  flex-flow: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin:-50px;
+  margin: -50px;
 }
 
-.loggedWorkout{
+.loggedWorkout {
   text-align: center;
   background-color: #c9dbca;
-  
 }
-.area{
-  margin:13px
+.area {
+  margin: 13px;
 }
-.workoutPage{
- align-items: center;
- text-align: center;
+.workoutPage {
+  align-items: center;
+  text-align: center;
 }
-.completedPage{
-width: 800px;
-margin-left: auto;
-margin-right: auto;
-overflow: scroll;
-height: 450px;
+.completedPage {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  height: 450px;
 }
 
-.one , .two , .three{
+.one,
+.two,
+.three {
   height: 150px;
   width: 100%;
   background-color: #c9dbca;
   padding: 20px;
   background: lightgrey;
-  margin:0;
+  margin: 0;
   display: inline-block;
   transform: perspective(1px) translateZ(0);
   position: relative;
@@ -369,7 +375,7 @@ height: 450px;
   transform-origin: 0 50%;
   transition: transform 0.3s ease-out;
 }
-.two:before{
+.two:before {
   content: "";
   position: absolute;
   top: 0;
@@ -382,7 +388,7 @@ height: 450px;
   transform-origin: 0 50%;
   transition: transform 0.3s ease-out;
 }
-.three:before{
+.three:before {
   content: "";
   position: absolute;
   top: 0;
@@ -395,21 +401,24 @@ height: 450px;
   transform-origin: 0 50%;
   transition: transform 0.3s ease-out;
 }
-  
 
-.one:hover , .two:hover , .three:hover {
+.one:hover,
+.two:hover,
+.three:hover {
   color: white;
 }
-.one:hover:before , .two:hover:before , .three:hover:before{
+.one:hover:before,
+.two:hover:before,
+.three:hover:before {
   transform: scaleX(1);
 }
-.one{
-  background-color:  rgb(201, 239, 202)  ;
+.one {
+  background-color: rgb(201, 239, 202);
 }
-.two{
-  background-color: rgb(201, 239, 242) ;
+.two {
+  background-color: rgb(201, 239, 242);
 }
 
-.three{
-  background-color: rgb(173,216,230);
+.three {
+  background-color: rgb(173, 216, 230);
 }
