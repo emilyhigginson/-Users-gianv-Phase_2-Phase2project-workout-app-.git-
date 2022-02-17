@@ -280,6 +280,17 @@
         "logArea": "Abs"
       },
       "id": 5
+    },
+    {
+      "e2211698-28ad-41a4-81a5-34cb3d855ead": {
+        "logName": "Crunches",
+        "logArea": "Abs"
+      },
+      "77bff5a9-6187-49f9-b4aa-81eaab1d5993": {
+        "logName": "Plank",
+        "logArea": "Abs"
+      },
+      "id": 6
     }
   ]
 }

@@ -20,10 +20,10 @@ function CompletedWorkouts() {
 
   return (
     <div >
-      <h2>Logged Workouts:</h2>
+      <h2 className="pageHeader">Logged Workouts:</h2>
       <br></br>
      
-      <h3>{logged}</h3>
+      <h3 className="log">{logged}</h3>
       <div></div>
     </div>
   );

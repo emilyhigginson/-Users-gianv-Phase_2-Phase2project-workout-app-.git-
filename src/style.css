@@ -167,7 +167,7 @@ button:hover {
   grid-area: 4/ 4/ 2/ 5;
 }
 /* card styling */
-.cardDisplay {
+.cardDisplay  {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -278,6 +278,23 @@ button:hover {
   cursor: pointer;
   backdrop-filter: blur(3px);
 }
-.workoutGroup{
-  border: 1px solid #044700;
+
+p{
+border-bottom: 2px solid #044700;
+}
+.timeStamp{
+  background-color: black;
+  color: white
+}
+.log{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px solid#013c58;
+}
+
+.loggedWorkout{
+  text-align: center;
+  border: 1px solid#013c58;
 }

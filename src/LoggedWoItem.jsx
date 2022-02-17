@@ -25,11 +25,12 @@ function LoggedWoItem({ logEx }) {
 
   return (
     <>
-      <div className="loggedWorkout">
-        <p>{logArea === undefined ? "Workout Completed on: " + timeStamp : null}</p>
-        <div>
-          <h3>{logName}</h3>
-          {logArea === undefined ? null : <h5>({logArea})</h5>}
+      <div >
+        <div className="loggedWorkout">
+        
+        <p className="timeStamp">{logArea === undefined ? "Workout Completed on: " + timeStamp : null}</p>
+          <h3>{logName} {logArea === undefined ? null : <h5>({logArea})</h5>}
+          </h3>
         </div>
       </div>
     </>
