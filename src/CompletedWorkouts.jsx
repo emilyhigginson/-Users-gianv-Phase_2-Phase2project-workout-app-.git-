@@ -19,12 +19,12 @@ function CompletedWorkouts() {
   });
 
   return (
-    <div >
+    <div>
       <h2 className="pageHeader">Logged Workouts:</h2>
       <br></br>
      
-      <h3 className="log">{logged}</h3>
-      <div></div>
+      <h3 className="loggedWorkout">{logged}</h3>
+     
     </div>
   );
 }

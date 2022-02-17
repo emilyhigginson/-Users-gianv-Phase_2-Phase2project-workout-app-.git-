@@ -22,7 +22,7 @@ function App() {
   function addLoggedExercise(loggedExercise) {
     setLoggedWorkouts({...loggedWorkouts, [uuidv4()]: loggedExercise 
     });
-  }
+  }console.log(loggedWorkouts);
 
   return (
     <div>

@@ -126,6 +126,8 @@ button:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: space-evenly;
+  margin-left:10px
+  
 }
 
 .checkbox {
@@ -139,26 +141,30 @@ button:hover {
   border: 1px solid black;
   padding-top: 5px;
   vertical-align: top;
+  margin: 0px 25px
 }
 .sort {
   font-size: 16px;
 }
 .checkbox:active,
 .checkbox:checked:active {
+  
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
     inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .checkbox:checked {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  
 }
 .checkbox:checked:after {
-  background-color: #013c58;
+  /* background-color: #013c58; */
   content: "\2714";
   font-size: 14px;
-  position: absolute;
-  top: 0px;
-  left: 3px;
+  position: relative;
+  bottom: 8px;
+  left: 0px;
+  
 }
 
 
@@ -279,22 +285,28 @@ button:hover {
   backdrop-filter: blur(3px);
 }
 
-p{
-border-bottom: 2px solid #044700;
-}
+
 .timeStamp{
-  background-color: black;
-  color: white
+  background-color: #044700;
+  color: white;
+  margin-top:20px;
+  
 }
 .log{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow:  wrap;
   justify-content: space-around;
   align-items: flex-start;
-  border: 1px solid#013c58;
+  margin:-50px;
+ 
+
 }
 
 .loggedWorkout{
   text-align: center;
-  border: 1px solid#013c58;
+  background-color: #c9dbca;
+  
+}
+.area{
+  margin:13px
 }

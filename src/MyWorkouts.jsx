@@ -30,7 +30,8 @@ function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts,
   // function handleTitle(e) {
   //   const woTitle = e.target.value;
   //   setTitle(woTitle);
-  // }
+  //
+  
 
   return (
     <>
