@@ -46,10 +46,7 @@ function Exercises({ woArray, setWoArray, myWoArray, setMyWoArray, addLoggedExer
     setWoArray([newWorkout, ...woArray]);
   }
 
-  
-
   return (
-    
     <div className="home">
       <Filter selected={selected} setSelected={setSelected} />
       <SearchBar

@@ -12,26 +12,15 @@ function App() {
   const [woArray, setWoArray] = useState([]);
   const [myWoArray, setMyWoArray] = useState([]);
   const [loggedWorkouts, setLoggedWorkouts] = useState({});
-  // const [title, setTitle]=useState('')
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
       .then((res) => res.json())
       .then((data) => setWoArray(data));
   }, []);
-
-  let d = Date.now();
-  // console.log(time);
   
-  const seconds=Math.floor((d/1000) % 60)
-  const minutes=Math.floor((d/ (1000*60)) % 60)
-  const hours=Math.floor((d/(1000*60*60) % 24))
-  const AmericanHours = hours-5
-
-  const timestamp = AmericanHours + ":" + minutes + ":" + seconds
-  
-  function addLoggedExercise(loggedExercise, timestamp) {
-    setLoggedWorkouts({...loggedWorkouts, timestamp, [uuidv4()]: loggedExercise
+  function addLoggedExercise(loggedExercise) {
+    setLoggedWorkouts({...loggedWorkouts, [uuidv4()]: loggedExercise
     });
   }
 

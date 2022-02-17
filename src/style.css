@@ -46,7 +46,6 @@
 .links {
   text-decoration: none;
   top: 7px;
-
   height: 60px;
   border: none;
   border-radius: 0px;
@@ -60,9 +59,6 @@
 span {
   padding-left: 5px;
 }
-/* span:hover{
-  color: white;
-} */
 .links:active:after {
   text-decoration: none;
   top: 7px;
@@ -362,7 +358,7 @@ button:hover {
   font-size: 50px;
   padding-top: 80px;
 }
-.one:before {
+.three:before {
   content: "";
   position: absolute;
   top: 0;
@@ -388,7 +384,7 @@ button:hover {
   transform-origin: 0 50%;
   transition: transform 0.3s ease-out;
 }
-.three:before {
+.one:before {
   content: "";
   position: absolute;
   top: 0;
@@ -402,23 +398,23 @@ button:hover {
   transition: transform 0.3s ease-out;
 }
 
-.one:hover,
+.three:hover,
 .two:hover,
-.three:hover {
+.one:hover {
   color: white;
 }
-.one:hover:before,
+.three:hover:before,
 .two:hover:before,
-.three:hover:before {
+.one:hover:before {
   transform: scaleX(1);
 }
-.one {
+.three {
   background-color: rgb(201, 239, 202);
 }
 .two {
   background-color: rgb(201, 239, 242);
 }
 
-.three {
+.one {
   background-color: rgb(173, 216, 230);
 }
