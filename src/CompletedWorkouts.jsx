@@ -14,8 +14,9 @@ function CompletedWorkouts() {
   const logged = completedArray.map((logWo) => {
     return Object.values(logWo).map((logEx) => {
       return  <LoggedWoItem key={logEx.id} logEx={logEx} />;
-    
+
     });
+
   });
 
   return (

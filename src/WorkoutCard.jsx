@@ -5,6 +5,7 @@ import trash from '../src/fonts/delete_forever_black_24dp.svg'
 
 
 function WorkoutCard({ wo, onAddWorkout, addLoggedExercise, isClicked, setIsClicked }) {
+  
   const { area, difficulty, instructions, name, added } = wo;
 
   const [style, setStyle] = useState("none");
@@ -12,7 +13,6 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise, isClicked, setIsClic
 
   let d = Date.now();
   // console.log(time);
-  
 
   function toggleCard(e) {
     if (style === "none") {
@@ -32,9 +32,7 @@ function WorkoutCard({ wo, onAddWorkout, addLoggedExercise, isClicked, setIsClic
     addLoggedExercise({ logName: name, logArea: area});
     setIsClicked(true)
     handleRemove()
-
   }
-
 
 
   return (

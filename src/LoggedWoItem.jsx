@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoggedWoItem({ logEx }) {
+function LoggedWoItem({ logEx, timestamp}) {
   const { logName, logArea } = logEx;
 
 
@@ -9,7 +9,7 @@ function LoggedWoItem({ logEx }) {
   return (
     <>
       <div>
-      <p className="timeStamp">{logArea === undefined ? "Workout Completed on: "  : null}</p>
+      {/* <p className="timeStamp">{logArea === undefined ? "Workout Completed on:" {timestamp} : null}</p> */}
         <div className="log">
           <h3>{logName} {logArea === undefined ? null : <h5 className="area">({logArea})</h5>}
           </h3>

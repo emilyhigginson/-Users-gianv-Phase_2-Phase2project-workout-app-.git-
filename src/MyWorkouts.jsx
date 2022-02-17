@@ -26,11 +26,6 @@ function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts,
       window.location.reload();
 
   }
-
-  // function handleTitle(e) {
-  //   const woTitle = e.target.value;
-  //   setTitle(woTitle);
-  //
   
 
   return (

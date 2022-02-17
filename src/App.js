@@ -28,7 +28,8 @@ function App() {
   const AmericanHours = hours-5
 
   const timestamp = AmericanHours + ":" + minutes + ":" + seconds
-  function addLoggedExercise(loggedExercise) {
+  
+  function addLoggedExercise(loggedExercise, timestamp) {
     setLoggedWorkouts({...loggedWorkouts, timestamp, [uuidv4()]: loggedExercise
     });
   }
@@ -41,15 +42,13 @@ function App() {
       <Switch>
         <Route exact path="/myworkouts">
           <MyWorkouts
-          // setTitle={setTitle}
-          // title={title}
             loggedWorkouts={loggedWorkouts}
             addLoggedExercise={addLoggedExercise}
             myWoArray={myWoArray}
           />
         </Route>
         <Route exact path="/completedworkouts">
-          <CompletedWorkouts loggedWorkouts={loggedWorkouts} />
+          <CompletedWorkouts loggedWorkouts={loggedWorkouts} setLoggedWorkouts={setLoggedWorkouts} />
         </Route>
         <Route exact path="/">
           <Home
