@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import MyWorkouts from "./MyWorkouts";
 import CompletedWorkouts from "./CompletedWorkouts";
 import NavBar from "./NavBar";
+import Exercises from "./Exercises";
 import Home from "./Home";
 import { v4 as uuidv4 } from "uuid";
 import "./style.css";
@@ -33,13 +34,15 @@ function App() {
     setLoggedWorkouts({...loggedWorkouts, timestamp, [uuidv4()]: loggedExercise
     });
   }
-  console.log(timestamp);
 
   return (
     <div>
       <div id="overlay"></div>
       <NavBar />
       <Switch>
+        <Route exact path="/" >
+           <Home/>
+        </Route>
         <Route exact path="/myworkouts">
           <MyWorkouts
             loggedWorkouts={loggedWorkouts}
@@ -50,8 +53,8 @@ function App() {
         <Route exact path="/completedworkouts">
           <CompletedWorkouts loggedWorkouts={loggedWorkouts} setLoggedWorkouts={setLoggedWorkouts} />
         </Route>
-        <Route exact path="/">
-          <Home
+        <Route exact path="/exercises">
+          <Exercises
             addLoggedExercise={addLoggedExercise}
             myWoArray={myWoArray}
             setWoArray={setWoArray}

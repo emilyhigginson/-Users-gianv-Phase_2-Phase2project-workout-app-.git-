@@ -30,17 +30,11 @@ function MyWorkouts({ myWoArray, addLoggedExercise, loggedWorkouts,
 
   return (
     <>
-      <div>
+      <div className="workoutPage">
         <h1 className="pageHeader">Today's Workout</h1>
-
+        {isClicked ? <button className="completedButton" onClick={postWorkout}> Log this Workout </button> : null}
         <div className="myWorkouts">{myWo}</div>
       </div>
-      {/* <label>
-        Name Today's Workout! <br></br>
-        <input onChange={handleTitle} value={title} type="text" />
-      </label> */}
-      <br></br>
-      {isClicked ? <button onClick={postWorkout}> Log this Workout </button> : null}
     </>
   );
 }
